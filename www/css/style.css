@@ -1,0 +1,45 @@
+#Show
+{
+	background-color:rgba(0, 0, 0, 0.4);  
+	height:20rem;
+	width:20rem;
+	float:left;
+	margin:1rem
+}
+
+
+.header
+{
+	background-color:rgba(0, 0, 0, 0.4);
+	height:3rem;
+	width:375px;
+	float:right;
+}
+
+
+body 				
+{
+	background-image: url("../images/background2.png");
+	background-repeat: repeat-y;
+	background-size: 100%;
+}	
+
+
+a:link  
+                   
+{
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+		
+}	
+
+
+a:visited
+
+{
+	color: rgb(119, 254, 246); 
+	background-color: transparent;
+	text-decoration: none;
+}
+	

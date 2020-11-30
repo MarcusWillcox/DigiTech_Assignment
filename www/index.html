@@ -1,0 +1,88 @@
+<html>
+
+	<head>
+	
+		<title>Welcome!</title>    
+		
+		<script>
+		
+			function show()
+			{
+				var div = document.getElementById("about")
+				div.style.display = "block";
+			}
+			
+			function hideabout()
+			{
+				var div = document.getElementById("about")
+				div.style.display = "none";
+			}
+		
+		</script>
+		
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	</head>
+	
+	<style>
+		
+
+	</style>
+	
+	
+
+	<body>
+	
+	
+	
+	
+		
+		<div class="header" >   
+		<!--transparent background header-->
+						
+			<div style="float:right; font-size: 2rem; color: white;">
+			
+	          <a href="Index.html">Home </a>| 
+			  <a href="Contact.html">Contact </a>| 
+			  <a href="CV.html">CV </a>| 
+			  <a onclick="show()" href='#'>About</a>
+				
+			</div>	
+			
+		</div>	
+		
+
+		<div id="about" style="display: none; background: black; border: 1rem solid black; position: absolute; right: 1rem; top: 3rem; ">   
+		<!--div that opens when you click 'about'-->
+			
+			<img style="height: 100px" src="images/background2.png">
+			
+			<a onclick="hideabout()" href='#'> Close </a>
+		
+		
+		
+		</div>
+		
+		
+			<p style="font-weight: bold; font-size: 10rem; text-align: center; color: white; padding-top: 10rem;">
+				
+				Marcus Kay-Willcox
+				
+			</p> 
+			
+			<p style="font-weight: bold; font-size: 3rem; text-align: center; color: white;">
+			
+				A Games Design Portfolio
+			
+			</p>
+		
+		
+		
+	</body>
+
+
+
+
+
+
+</html>

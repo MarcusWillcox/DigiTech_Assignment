@@ -1,0 +1,136 @@
+<html>
+
+	<head>
+	
+		<title>Welcome!</title>    <!--This is the title in the tab header-->
+		<link rel="stylesheet"type="text/css" href="css/style.css"/>
+		
+		<script>
+		
+			function show()
+			{
+				var div = document.getElementById("about")
+				div.style.display = "block";
+			}
+			
+			function hideabout()
+			{
+				var div = document.getElementById("about")
+				div.style.display = "none";
+			}
+		
+		</script>
+		
+		
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+		
+		<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+		
+	</head>
+	
+
+	
+	
+
+	<body>
+	
+	
+	    <div style="background-color:rgba(0, 0, 0, 0.4); height:3rem; width:375px; float:right;">    <!--return of the header div!-->
+						
+			<div style="float:right; font-size: 2rem; color: white;">
+			
+				<a href="index.html">Home </a>|
+				<a href="contact.html">Contact </a>|
+				<a href="cv.html">CV <a/>|
+				<a onclick="show()" href='#'>About</a>
+				
+			</div>
+			
+			
+		</div>	
+		
+		<div id="about" style="display: none; background: black; border: 1rem solid black; position: absolute; right: 1rem; top: 3rem; ">   
+		<!--div that opens when you click 'about'-->
+			
+			<img style="height: 100px" src="images/background2.png">
+			
+			<a onclick="hideabout()" href='#'> Close </a>
+		
+		</div>
+		
+
+		
+			<p style="font-weight: bold; font-size: 2rem; color: white;">
+			
+			~ Models ~
+			
+			</p>	
+			
+			
+		<div id= "Show">   <!--The Div where 3D models show up-->
+						
+			<model-viewer style="height: 20rem; width: 20rem;" src="models/naruto/scene.gltf" auto-rotate camera-controls></model-viewer>
+			
+			
+			
+		</div>
+		
+		
+		
+		<div id= "Show">
+
+           <model-viewer style="height: 20rem; width: 20rem;" src="models/naruto/scene.gltf" auto-rotate camera-controls></model-viewer>
+		
+		</div>
+		
+		
+		
+		
+		<div id= "Show">
+
+			<model-viewer style="height: 20rem; width: 20rem;" src="models/Table/scene.gltf" auto-rotate camera-controls></model-viewer>
+		
+		</div>
+	
+	
+	
+	
+		<div id= "Show">
+
+			<model-viewer style="height: 20rem; width: 20rem;" src="models/Table/scene.gltf" auto-rotate camera-controls></model-viewer>
+		
+		</div>
+		
+		
+		
+		
+						
+		<div id= "Show">
+		
+			<model-viewer style="height: 20rem; width: 20rem;" src="models/Table/scene.gltf" auto-rotate camera-controls></model-viewer>
+
+		</div>
+	
+	
+	
+	
+	
+		<div id= "Show">
+
+			<model-viewer style="height: 20rem; width: 20rem;" src="models/Table/scene.gltf" auto-rotate camera-controls></model-viewer>
+		
+		</div>
+		
+		
+		
+		
+		<div id= "Show">
+
+			<model-viewer style="height: 20rem; width: 20rem;" src="models/Table/scene.gltf" auto-rotate camera-controls></model-viewer>		
+
+		</div>
+		
+		
+
+
+</html>
