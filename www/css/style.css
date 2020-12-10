@@ -7,7 +7,6 @@
 	margin: 1rem
 }
 
-
 .header
 {
 	background-color: rgba(0, 0, 0, 0.4);
@@ -23,16 +22,12 @@
 	color: white;	
 }
 
-
-
-
 body 				
 {
 	background-image: url("../images/background2.png");
 	background-repeat: repeat-y;
 	background-size: 100%;
 }	
-
 
 a:link  
                    
@@ -42,7 +37,6 @@ a:link
 	text-decoration: none;
 		
 }	
-
 
 a:visited
 
