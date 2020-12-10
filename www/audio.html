@@ -1,0 +1,104 @@
+<html>
+
+	<head>
+	
+		<title>Welcome!</title>    
+		
+		<script>
+		
+			function show()
+			{
+				var div = document.getElementById("about")
+				div.style.display = "block";
+			}
+			
+			function hideabout()
+			{
+				var div = document.getElementById("about")
+				div.style.display = "none";
+			}
+		
+		function start()
+         {
+		     var clip = new Audio();
+			 clip.src = "audio/shot.wav"
+			 
+			 clip.addEventListener("canplaythrough", function()
+			 {
+			     alert("Click OK for Gunshot Audio!");
+				 clip.play();
+			 });
+			 
+			 clip.addEventListener("ended", function()
+			 {
+			     alert("The audio has finished playing now!");
+			 });
+	     }
+		 
+		</script>
+		
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	</head>
+	
+
+	<body>
+	
+	
+		<div class="header" >   
+		<!--transparent background header(top right)-->
+						
+			<div style="float:right; font-size: 2rem; color: white;">
+			
+	          <a href="Index.html">Home </a>| 
+			  <a href="Contact.html">Contact </a>| 
+			  <a href="CV.html">CV </a>| 
+			  <a onclick="show()" href='#'>About</a>
+				
+			</div>	
+			
+		</div>	
+		
+
+		<div id="about" style="display: none; background: black; border: 1rem solid black; position: absolute; right: 1rem; top: 3rem; ">   
+		<!--div that opens when you click 'about'-->
+			
+			<img style="height: 100px" src="images/background2.png">
+			
+			<a onclick="hideabout()" href='#'> Close </a>
+		
+		
+		
+		</div>
+		
+		
+			<p style="font-weight: bold; font-size: 3rem; color: white;">
+			
+			~ Random Audio ~
+			
+			</p>
+			
+			<p style="font-weight: bold; font-size: 2rem; color: white;">
+			
+			This is a page displaying my ability to add audio to a button and also embed audio in HTML!
+			
+			</p>
+			
+			<p>
+			
+			<input href="#" type="button" value ="Pointless Button for Audio" onclick="start();"></input>
+			
+			</p>
+			
+			<p>
+			
+			<audio id="myAudio" controls>>
+			<source src="audio/music.OGG">
+			</audio>
+			
+			</p>
+			
+		
+		
+		
+	</body>
