@@ -22,6 +22,21 @@
 	color: white;	
 }
 
+.paragraph
+{
+	font-weight: bold;
+	font-size: 2rem;
+	color: white;
+	font-family: 
+}
+
+img
+{
+	border-width: 5px;
+	border-style: solid;
+	border-color: black;
+}
+
 body 				
 {
 	background-image: url("../images/background2.png");
