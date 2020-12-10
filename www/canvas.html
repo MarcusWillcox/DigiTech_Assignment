@@ -6,71 +6,128 @@
 		
 		<script>
 		
-			function show()
-			{
-				var div = document.getElementById("about")
-				div.style.display = "block";
-			}
-			
-			function hideabout()
-			{
-				var div = document.getElementById("about")
-				div.style.display = "none";
-			}
-		
+			 var x = 10;
+			 var y = 10;
+			 var playerImage;
+			 var frameNumber = 0;
+			 
+			 function load()
+			 {
+			     // Setup playerImage variable
+				 playerImage = new Image();
+				 
+				 // Set the src
+				 playerImage.src = "images/player.png";
+			 }
+		     
+			 function main()
+			 {
+			     // Call the load function
+				 load();
+				 
+				 // Get a reference to our canvas by the specified ID
+				 var canvas = document.getElementById("canvas");
+				 
+				 // Set the width and height
+				 canvas.width = 640;
+				 canvas.height = 480;
+				 
+				 // Create the 2D drawing context
+				 var ctx = canvas.getContext("2d");
+				 
+				 // Call out draw function, passing in the context
+				 draw(ctx);
+			 }
+			 
+			 function draw(ctx)
+			 {
+			     // Set the pen to gray, draw big rectangle
+				 ctx.fillStyle = "orange";
+				 ctx.fillRect(0, 0, 640, 480);
+				 
+				 var frameWidth = playerImage.width / 5;
+				 var frameHeight = playerImage.height / 4;
+				 
+				 // Draw the player image
+				 ctx.drawImage(playerImage,
+				 frameNumber * frameWidth, 0, 
+				 frameWidth, frameHeight,
+				 x, y,
+				 200, 200);
+			 
+			     
+				 frameNumber++;
+				 if (frameNumber > 4)
+				 {
+				     frameNumber = 0;
+				 }
+				 
+				 // Ask the browser to call this function again as soon as it canvas
+				 window.requestAnimationFrame(function(){draw(ctx);});
+			 }
+			 
+			 function keydown(event)
+			 {
+			     if (event.key == "a")
+				 {
+				     x -= 5;
+				 }
+				 else if (event.key == "d")
+				 {
+				     x += 5;
+				 }
+				 if (event.key == "w")
+				 {
+				     y -= 5;
+				 }
+				 else if (event.key == "s")
+				 {
+				     y += 5;
+				 }
+			 }
+			 
+			 window.onload = main;
+			 window.addEventListener("keydown", keydown);
 		</script>
 		
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 		
 	</head>
-	
-	<style>
-		
-
-	</style>
-	
-	
 
 	<body>
 	
-	
-	
-	
-		
-		<div class="header" >   
+	<div class="header" >   
 		<!--transparent background header(top right)-->
 						
 			<div style="float:right; font-size: 2rem; color: white;">
 			
 	          <a href="Index.html">Home </a>| 
 			  <a href="Contact.html">Contact </a>| 
-			  <a href="CV.html">CV </a>| 
-			  <a onclick="show()" href='#'>About</a>
+			  <a href="CV.html">CV </a>| About
 				
 			</div>	
 			
 		</div>	
-		
-
-		<div id="about" style="display: none; background: black; border: 1rem solid black; position: absolute; right: 1rem; top: 3rem; ">   
-		<!--div that opens when you click 'about'-->
-			
-			<img style="height: 100px" src="images/background2.png">
-			
-			<a onclick="hideabout()" href='#'> Close </a>
-		
-		
-		
-		</div>
-		
-		
-			<p class="title">
+	
+		<p class="title">
 			
 			~ CANVAS Example ~
 			
-			</p>
+		</p>
+		
+		<p style="font-weight: bold; font-size: 2rem; color: white;">
 			
+			This is a page displaying my ability to add Canvas Experimentation to my site!
+			
+		</p>
 		
+		<p style="font-weight: bold; font-size: 2rem; color: white;">
 		
+			Use keys WASD to make the character move!
+			
+		</p>
 		
+		<canvas id="canvas" style="background: gray">
+		</canvas>
+			
 	</body>
