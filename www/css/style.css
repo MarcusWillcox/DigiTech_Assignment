@@ -1,20 +1,29 @@
 #Show
 {
-	background-color:rgba(0, 0, 0, 0.4);  
-	height:20rem;
-	width:20rem;
-	float:left;
-	margin:1rem
+	background-color: rgba(0, 0, 0, 0.4);  
+	height: 20rem;
+	width: 20rem;
+	float: left;
+	margin: 1rem
 }
 
 
 .header
 {
-	background-color:rgba(0, 0, 0, 0.4);
-	height:3rem;
-	width:375px;
-	float:right;
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 3rem;
+	width: 375px;
+	float: right;
 }
+
+.title
+{
+	font-weight: bold;
+	font-size: 3rem;
+	color: white;	
+}
+
+
 
 
 body 				
