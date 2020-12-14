@@ -7,6 +7,20 @@
 	margin: 1rem
 }
 
+.content
+{
+  display: flex;
+}
+
+.content img
+{
+  margin-right: 10px;
+  display: block;
+}
+
+.content h3,
+.content p {margin: 0;}
+
 .footer
 {
 	position: fixed;
